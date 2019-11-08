@@ -2,3 +2,5 @@ __pycache__
 *sqlite*
 env/
 DockerFile
+.vscode/
+.DS_Store
