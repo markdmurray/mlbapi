@@ -13,10 +13,6 @@ class TeamsBySeason(models.Model):
     id = models.AutoField(primary_key=True)
     data = JSONField()  # This field type is a guess.
 
-    def __str__(self):
-        return self.data
-
     class Meta:
         managed = False
         db_table = 'teams_by_season'
-    
