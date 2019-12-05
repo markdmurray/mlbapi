@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user
+hooks:
+  BeforeInstall:
+    - location: mlbapi-codedeploy-scripts/before_install.sh
+    - location: mlbapi-codedeploy-scripts/export_secrets.sh
+    - runas: ec2-user
+  AfterInstall:
+    - location: mlbapi-codedeploy-scripts/after_install.sh
+      timeout: 180
+    - runas: ec2-user
