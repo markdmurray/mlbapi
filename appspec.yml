@@ -2,12 +2,12 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user
+    destination: /home/ec2-user/mlbapi
 hooks:
   BeforeInstall:
-    - location: /home/ec2-user/mlbapi-codedeploy-scripts/before_install.sh
+    - location: scripts/before_install.sh
       runas: ec2-user
   AfterInstall:
-    - location: /home/ec2-user/mlbapi-codedeploy-scripts/after_install.sh
+    - location: scripts/after_install.sh
       timeout: 180
       runas: ec2-user
