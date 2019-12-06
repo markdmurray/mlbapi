@@ -5,6 +5,7 @@ set -o pipefail
 
 WORK_DIRECTORY="/home/ec2-user/mlbapi"
 
+sudo chown -R ec2-user /home/ec2-user/mlbapi
 cd $WORK_DIRECTORY
 virtualenv -p python3 env
 source env/bin/activate
