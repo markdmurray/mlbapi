@@ -26,6 +26,7 @@ SECRET_KEY = 'p6eecy9&!u6#t^g3zcwzz5g8zm4hm*v#b1yjij&2mi22@3zak7'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+TEMPLATE_DIR = os.path.join(BASE_DIR)
 
 
 # Application definition
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'mlbapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

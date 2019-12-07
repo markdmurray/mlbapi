@@ -18,6 +18,7 @@ from django.urls import path
 from teams import views
 
 urlpatterns = [
+    path('', views.HomeView, name='home'),
     path('admin/', admin.site.urls),
     path('mlb/', views.TeamsBySeasonView, name='mlb'),
 ]
