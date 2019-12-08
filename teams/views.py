@@ -6,3 +6,6 @@ from teams.models import TeamsBySeason
 def TeamsBySeasonView(request):
     data = TeamsBySeason.objects.filter(data__city='Chicago').values_list('data')
     return JsonResponse(list(data), safe=False)
+
+def HomeView(request):
+    return render(request, 'templates/home.html', {})

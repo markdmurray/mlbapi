@@ -4,3 +4,4 @@ env/
 DockerFile
 .vscode/
 .DS_Store
+*.log
