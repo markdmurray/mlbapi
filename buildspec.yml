@@ -6,7 +6,7 @@ phases:
       docker: 18
     commands:
       - echo "Installing dependencies"
-      - sudo yum install -y git gcc python3-devel python3-pip python-virtualenv
+      - yum install -y git gcc python3-devel python3-pip python-virtualenv
       - pip install -r requirements.txt
   build:
     commands:
